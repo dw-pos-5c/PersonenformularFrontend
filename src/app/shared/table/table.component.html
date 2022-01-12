@@ -1,0 +1,18 @@
+<table class="table">
+  <tr>
+    <th>#</th>
+    <th>Lastname</th>
+    <th>Firstname</th>
+    <th>Birthday</th>
+    <th>Tel</th>
+    <th>Address</th>
+  </tr>
+  <tr *ngFor="let person of persons">
+    <td>{{ person.id }}</td>
+    <td>{{ person.lastname }}</td>
+    <td>{{ person.firstname }}</td>
+    <td>{{ person.born }}</td>
+    <td>{{ person.tel }}</td>
+    <td>{{ person.address }}</td>
+  </tr>
+</table>
