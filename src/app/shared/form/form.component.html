@@ -1,1 +1,26 @@
-<p>form works!</p>
+<div>
+  <label for="firstname">Vorname:</label>
+  <input [(ngModel)]="firstname" type="text" id="firstname">
+  <span *ngIf="!firstnameValid" class="text-danger">Vorname muss mit Großbuchstaben beginnen u. mindestens 3 Zeichen lang sein.</span>
+</div>
+<div>
+  <label for="lastname">Nachname:</label>
+  <input [(ngModel)]="lastname" type="text" id="lastname">
+  <span *ngIf="!lastnameValid" class="text-danger">Lehner, DeNiro, DelPonte, ...</span>
+</div>
+<div>
+  <label for="born">Geburtsdatum:</label>
+  <input [(ngModel)]="born" type="text" id="born">
+  <span *ngIf="!bornValid" class="text-danger">Format: 01.02.2015</span>
+</div>
+<div>
+  <label for="tel">Tel.:</label>
+  <input [(ngModel)]="tel" type="text" id="tel">
+  <span *ngIf="!telValid" class="text-danger">Format: +43 (01) 1234</span>
+</div>
+<div>
+  <label for="address">Adresse:</label>
+  <input [(ngModel)]="address" type="text" id="address">
+  <span *ngIf="!addressValid" class="text-danger">Format: A-4710 Grieskirchen, Schulstrasse 1</span>
+</div>
+<button (click)="checkForm()">Save</button>
